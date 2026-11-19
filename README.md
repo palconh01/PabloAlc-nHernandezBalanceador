@@ -71,7 +71,7 @@ EOF
     SHELL
   end
 
-  # CAPA 2: SERVIDORES WEB BACKEND (Web1 y Web2)
+  # SERVIDORES WEB BACKEND (Web1 y Web2)
 
   [
     { name: "web1", vm_name: "PabloAlconWeb1", ip_c2: "192.168.20.10", ip_c3: "192.168.30.10" },
@@ -126,7 +126,7 @@ EOF
     end
   end
 
-  # CAPA 1: BALANCEADOR DE CARGA (Con Nginx)
+  # BALANCEADOR DE CARGA (Con Nginx)
 
   config.vm.define "balanceador" do |bal|
     bal.vm.hostname = "PabloAlconBalanceador"
