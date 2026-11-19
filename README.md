@@ -191,7 +191,7 @@ A continuación, se muestra la verificación del estado de las cuatro máquinas 
 
 Estado de las máquinas virtuales con vagrant status
 
-!image.png
+![Estado de las máquinas en Vagrant](img/VagStatus.png)
 
 ---
 
@@ -207,7 +207,7 @@ Verificación de las reglas activas del cortafuegos UFW en la Capa 3:
 
 Reglas de cortafuegos UFW aplicadas en Capa 3
 
-!image.png
+![Reglas de cortafuegos UFW en Capa 3](img/UFWBD.png)
 
 ---
 
@@ -228,7 +228,7 @@ Comprobación del servicio MariaDB activo y en ejecución en `PabloAlconBBDD`:
 
 Estado del servicio MariaDB en PabloAlconBBDD
 
-!image.png
+![Estado del servicio MariaDB](img/StatusBD.png)
 
 ---
 
@@ -238,19 +238,19 @@ En las instancias `PabloAlconWeb1` y `PabloAlconWeb2` se instala el servidor web
 
 Comprobación del servicio Apache y prueba local con `curl http://localhost` en `PabloAlconWeb1`:
 
-!image.png
+![Comprobación de Apache y BBDD en PabloAlconWeb1](img/CurlW1.png)
 
 Estado de Apache y prueba local en PabloAlconWeb1
 
-!image.png
+![Estado del servicio Apache en PabloAlconWeb1](img/StatusW1.png)
 
 Comprobación del servicio Apache y prueba local con `curl http://localhost` en `PabloAlconWeb2`:
 
-!image.png
+![Comprobación de Apache y BBDD en PabloAlconWeb2](img/CurlW2.png)
 
 Estado de Apache y prueba local en PabloAlconWeb2
 
-!image.png
+![Estado del servicio Apache en PabloAlconWeb2](img/StatusW2.png)
 
 ---
 
@@ -271,11 +271,11 @@ Comprobación del servicio Nginx activo, interfaces de red (`ip -br a`) y prueba
 
 Estado de Nginx, direccionamiento y prueba de balanceo
 
-!image.png
+![Estado del servicio Nginx](img/StatusBal.png)
 
-!image.png
+![Interfaces de red del balanceador](img/iPBal.png)
 
-!image.png
+![Prueba de balanceo mediante doble curl](img/CurlBal.png)
 
 ### Certificado SSL con Certbot y Let’s Encrypt
 
@@ -283,7 +283,7 @@ Se ha registrado el dominio gratuito `pabloalcon.duckdns.org` en DuckDNS:
 
 Registro del dominio en DuckDNS
 
-!image.png
+![Registro del dominio en DuckDNS](img/Duck.png)
 
 Al trabajar en un entorno local con máquinas virtuales sin abrir puertos en el router, la emisión del certificado válido de Let’s Encrypt se ha realizado mediante desafío DNS manual con Certbot:
 
@@ -319,13 +319,13 @@ server {
 
 **Aclaración sobre la resolución local:** Para acceder al balanceador desde el equipo anfitrión utilizando el nombre de dominio real y validar el certificado sin necesidad de abrir puertos en el router, se añadió la entrada `192.168.1.201 pabloalcon.duckdns.org` en el archivo `C:\Windows\System32\drivers\etc\hosts` de Windows.
 
-!image.png
+![Verificación del registro TXT para Certbot](img/Domtxt.png)
 
 Verificación de la conexión cifrada mediante HTTPS con certificado válido en el navegador:
 
 Certificado SSL válido en el navegador
 
-!image.png
+![Certificado SSL válido en el navegador](img/Candao.png)
 
 ---
 
@@ -337,12 +337,12 @@ Petición atendida por `PabloAlconWeb1` (`192.168.20.10`):
 
 Petición atendida por PabloAlconWeb1
 
-!image.png
+![Respuesta desde PabloAlconWeb1 por HTTPS](img/Com10.png)
 
 Petición atendida por `PabloAlconWeb2` (`192.168.20.11`) tras recargar la página:
 
 Petición atendida por PabloAlconWeb2
 
-!image.png
+![Respuesta desde PabloAlconWeb2 por HTTPS](img/Com11.png)
 
 El vídeo demostrativo del funcionamiento completo de la aplicación se encuentra en la carpeta img/Demostracion.
